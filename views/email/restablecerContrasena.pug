@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        style 
+            include ./email.css
+    body 
+        h2 Restablecer Contraseña
+        p Haz solicitado restablecer tu contrazeña, haz clic en el siguiente enlace para reestablecerlo.
+        a(href=`${resetUrl}`) Ir a enlace
+        p Si no puede acceder a este enlace visita #{resetUrl}
+        p Si no solicitaste este Email puedes ignorarlo

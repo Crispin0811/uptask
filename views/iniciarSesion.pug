@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partial/header
+
+    body.login
+        .contenedor-formulario
+            h1 Iniciar Sesion en UpTask
+
+            if error
+                p.alerta.error= error
+            if error
+                p.alerta.error= error
+
+            form#formulario.caja.caja-login(action="/iniciar-sesion" method="post")
+                .campo
+                    label(for="email") E-mail
+                    input(type="email" name="email" placeholder="Tu email" value= email)
+                .campo
+                    label(for="password") password
+                    input(type="password" name="password" placeholder="Tu password" value= password)
+                .campo.enviar
+                    input.boton(type="submit" value="Iniciar Sesión" )
+                .campo.acciones
+                    a(href="/crear-cuenta") Crear Cuenta 
+                    a(href="/reestablecer") Olvidate tu Contraseña
